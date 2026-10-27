@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>無料キャリア相談｜「今の仕事、このままでいいのかな」と思ったら</title>
+<meta name="description" content="転職するか決めていなくても大丈夫。キャリアアドバイザーが無料で相談にのります。土日休み・残業少なめの求人紹介、書類添削、面接対策まで伴走します。">
+<meta property="og:title" content="「今の仕事、このままでいいのかな…」と思ったら｜無料キャリア相談">
+<meta property="og:description" content="転職するか決めていなくてもOK。相談・サポートはすべて無料です。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff8f3; --paper:#ffffff; --ink:#2a2f45; --ink-dim:#6b7088;
+  --navy:#1f2a5a; --coral:#ef4f6c; --coral-2:#d8334f; --coral-soft:#ffe4e8;
+  --green:#22b35e; --green-2:#168a45; --yellow:#ffe066; --line:#f0e2d8;
+  --col:560px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans",sans-serif;line-height:1.75;font-size:15px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.col{max-width:var(--col);margin:0 auto}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,248,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.hdr .col{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.hdr .logo{font-weight:900;font-size:14px;color:var(--navy);letter-spacing:.02em}
+.hdr .logo small{display:block;font-size:10px;font-weight:700;color:var(--ink-dim)}
+.hdr-cta{background:var(--green);color:#fff;text-decoration:none;font-weight:900;font-size:13px;padding:8px 14px;border-radius:999px;box-shadow:0 3px 0 var(--green-2)}
+
+/* hero */
+.hero{padding:22px 16px 8px;text-align:center}
+.hero .eyebrow{display:inline-block;background:var(--coral-soft);color:var(--coral-2);font-weight:900;font-size:12.5px;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.hero h1{font-size:clamp(25px,7.4vw,34px);line-height:1.35;font-weight:900;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--coral);background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.hero .lead{margin-top:10px;font-weight:700;color:var(--ink-dim);font-size:14px}
+.hero-img{margin:16px auto 0;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(31,42,90,.12)}
+
+/* buttons */
+.btn{display:block;width:100%;text-align:center;text-decoration:none;background:linear-gradient(180deg,#2fc56d,var(--green));color:#fff;border-radius:999px;padding:14px 18px 15px;font-weight:900;font-size:18px;box-shadow:0 5px 0 var(--green-2);line-height:1.3;border:0;cursor:pointer;font-family:inherit;transition:transform .1s, box-shadow .1s}
+.btn small{display:block;font-size:12px;font-weight:700;opacity:.95}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--green-2)}
+.cta-wrap{padding:18px 16px 6px}
+.cta-note{text-align:center;font-size:12px;color:var(--ink-dim);margin-top:10px}
+
+/* section */
+section{padding:40px 16px}
+.sec-ttl{text-align:center;font-size:clamp(21px,6vw,26px);font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:6px}
+.sec-sub{text-align:center;font-size:13px;color:var(--ink-dim);margin-bottom:22px;font-weight:700}
+
+/* manga */
+.manga{background:var(--paper)}
+.manga .pages{display:grid;gap:14px}
+.manga .pages img{border-radius:10px;border:1px solid var(--line)}
+.manga .more{display:none}
+.manga.open .more{display:grid;gap:14px}
+.read-more{margin-top:14px;background:var(--navy);box-shadow:0 5px 0 #121a3d;font-size:16px}
+
+/* worries */
+.worries ul{list-style:none;display:grid;gap:10px}
+.worries li{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 44px;position:relative;font-weight:700}
+.worries li::before{content:"";position:absolute;left:14px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:6px;border:2px solid var(--coral);background:#fff}
+.worries li::after{content:"";position:absolute;left:20px;top:50%;width:6px;height:11px;margin-top:-8px;border:solid var(--coral);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.worries .answer{margin-top:18px;text-align:center;font-weight:900;color:var(--navy);font-size:17px;line-height:1.6}
+.worries .answer b{color:var(--coral)}
+
+/* features */
+.features{background:var(--paper)}
+.feat{display:grid;gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;background:var(--bg)}
+.card .num{display:inline-block;font-size:11px;font-weight:900;color:#fff;background:var(--coral);border-radius:999px;padding:1px 10px;margin-bottom:6px}
+.card h3{font-size:17px;color:var(--navy);line-height:1.45;margin-bottom:4px}
+.card p{font-size:14px;color:var(--ink)}
+
+/* flow */
+.flow ol{list-style:none;counter-reset:s;display:grid;gap:0}
+.flow li{counter-increment:s;position:relative;padding:0 0 18px 52px}
+.flow li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;display:grid;place-items:center}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:17px;top:38px;bottom:2px;width:2px;background:var(--line)}
+.flow h3{font-size:16px;color:var(--navy);line-height:1.5}
+.flow h3 span{font-size:12px;color:var(--coral-2);margin-left:6px}
+.flow p{font-size:13.5px;color:var(--ink-dim)}
+
+/* faq */
+.faq{background:var(--paper)}
+.qa{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg)}
+.qa summary{list-style:none;cursor:pointer;padding:14px 40px 14px 44px;position:relative;font-weight:900;color:var(--navy)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"Q";position:absolute;left:14px;top:12px;color:var(--coral);font-size:18px}
+.qa summary::after{content:"+";position:absolute;right:16px;top:10px;font-size:22px;color:var(--ink-dim)}
+.qa[open] summary::after{content:"−"}
+.qa p{padding:0 16px 14px 44px;font-size:14px}
+
+/* form */
+.form-sec{background:linear-gradient(180deg,#1f2a5a,#2c3b7a);color:#fff}
+.form-sec .sec-ttl{color:#fff}
+.form-sec .sec-sub{color:#cdd5f3}
+.form-card{background:#fff;color:var(--ink);border-radius:18px;padding:22px 16px 24px}
+.f{margin-bottom:16px}
+.f label,.f .lbl{display:block;font-weight:900;font-size:14px;margin-bottom:6px;color:var(--navy)}
+.req,.opt{display:inline-block;font-size:10.5px;font-weight:900;padding:1px 7px;border-radius:4px;margin-left:6px;vertical-align:2px}
+.req{background:var(--coral);color:#fff}
+.opt{background:#e7e9f2;color:var(--ink-dim)}
+.f input[type=text],.f input[type=tel],.f input[type=email],.f select,.f textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1.5px solid #d6d9e6;border-radius:10px;background:#fbfbfe;color:var(--ink)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--coral);background:#fff}
+.f textarea{min-height:96px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;font-weight:700;font-size:13.5px;color:var(--ink)}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;border:1.5px solid #d6d9e6;border-radius:999px;padding:7px 13px;background:#fbfbfe;cursor:pointer}
+.chips input:checked + span{border-color:var(--coral);background:var(--coral-soft);color:var(--coral-2);font-weight:900}
+.chips input:focus-visible + span{outline:2px solid var(--navy);outline-offset:2px}
+.agree{display:flex;gap:8px;align-items:flex-start;font-size:13px;margin:4px 0 16px}
+.agree input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--coral)}
+.agree a{color:var(--coral-2);font-weight:700}
+.form-foot{font-size:11.5px;color:var(--ink-dim);margin-top:12px;line-height:1.6}
+.err{display:none;color:var(--coral-2);font-size:12.5px;font-weight:700;margin-top:4px}
+.f.bad .err{display:block}
+.f.bad input,.f.bad select{border-color:var(--coral)}
+
+/* footer */
+footer{padding:28px 16px 96px;font-size:12px;color:var(--ink-dim);text-align:center;line-height:1.9}
+footer a{color:var(--ink-dim)}
+
+/* floating cta */
+.float{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:8px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);box-shadow:0 -6px 18px rgba(0,0,0,.1);transform:translateY(110%);transition:transform .3s}
+.float.show{transform:none}
+.float .btn{max-width:var(--col);margin:0 auto;font-size:16px;padding:11px 16px 12px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.float{transition:none}}
+</style>
+<!-- Google tag (gtag.js) : 計測IDは公開前に設定（README参照） -->
+<script>
+  window.GA_ID = ''; // 例: 'G-XXXXXXXXXX'
+  if (window.GA_ID) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', window.GA_ID);
+  }
+  function track(name, params){ try { if (window.gtag) gtag('event', name, params || {}); } catch(e){} }
+</script>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="col">
+    <div class="logo">無料キャリア相談<small>転職するか決めていなくてもOK</small></div>
+    <a class="hdr-cta" href="#form" data-cta="header">無料で相談する</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero col">
+    <span class="eyebrow">相談・サポートはすべて無料</span>
+    <h1>「今の仕事、<br><em>このままでいいのかな…</em>」<br>と思ったら</h1>
+    <p class="lead">キャリアアドバイザーが、あなたの「これから」を一緒に整理します。</p>
+    <div class="hero-img"><img src="img/manga_p1.jpg" width="900" height="1124" alt="漫画1ページ目：朝礼で上司に詰められ、夜遅くまで残業し、帰り道に『私、このままでいいのかな』とつぶやく主人公" fetchpriority="high"></div>
+  </div>
+
+  <div class="cta-wrap col">
+    <a class="btn" href="#form" data-cta="hero"><small>1分で入力完了</small>無料でキャリア相談する</a>
+    <p class="cta-note">しつこい勧誘はしません。話を聞くだけでも大丈夫です。</p>
+  </div>
+
+  <section class="manga" id="manga">
+    <div class="col">
+      <h2 class="sec-ttl">入社5年目、ユイの話</h2>
+      <p class="sec-sub">数字と残業に追われていた毎日が、変わるまで</p>
+      <div class="pages">
+        <img src="img/manga_p2.jpg" width="900" height="1124" loading="lazy" alt="漫画2ページ目：カフェで友人に転職エージェントへの相談を勧められる">
+      </div>
+      <div class="more" id="mangaMore">
+        <img src="img/manga_p3.jpg" width="900" height="1124" loading="lazy" alt="漫画3ページ目：オンライン面談でアドバイザーに強みを見つけてもらい、涙ぐむ">
+        <img src="img/manga_p4.jpg" width="900" height="1187" loading="lazy" alt="漫画4ページ目：土日休み・残業少なめの求人例に驚き、書類添削と面接対策を経て面接本番へ">
+        <img src="img/manga_p5.jpg" width="900" height="1187" loading="lazy" alt="漫画5ページ目：内定が出て、3ヶ月後には定時で帰れるようになり友人と乾杯">
+      </div>
+      <button class="btn read-more" id="readMore" type="button" aria-controls="mangaMore" aria-expanded="false">続きを読む（全5ページ）</button>
+      <p class="cta-note">※登場人物・求人はイメージです（AI生成イラスト）</p>
+    </div>
+  </section>
+
+  <section class="worries">
+    <div class="col">
+      <h2 class="sec-ttl">ひとつでも当てはまったら</h2>
+      <p class="sec-sub">同じ悩みで相談に来る方が、たくさんいます</p>
+      <ul>
+        <li>毎月の数字やノルマに追われて、気が休まらない</li>
+        <li>残業続きで、平日に自分の時間がない</li>
+        <li>休みの日も、仕事のことばかり考えてしまう</li>
+        <li>転職したいけど、何から始めればいいか分からない</li>
+        <li>自分の強みや、向いている仕事が分からない</li>
+      </ul>
+      <p class="answer">ひとりで抱えこまずに、<br><b>まずは話してみませんか？</b></p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="col">
+      <h2 class="sec-ttl">相談するとできること</h2>
+      <p class="sec-sub">ご利用はすべて無料です</p>
+      <div class="feat">
+        <div class="card"><span class="num">01</span><h3>あなたの「強み」を言葉にします</h3><p>今のお仕事のこと、モヤモヤしていることをじっくりお聞きし、自分では気づきにくい経験やスキルを一緒に整理します。</p></div>
+        <div class="card"><span class="num">02</span><h3>希望に合う求人だけをご紹介</h3><p>土日休み・残業少なめ・未経験OKなど、大事にしたい条件をふまえて、合いそうな求人を選んでご提案します。</p></div>
+        <div class="card"><span class="num">03</span><h3>書類添削・面接対策まで伴走</h3><p>履歴書・職務経歴書の作成から、面接で伝えるエピソードの準備まで、一緒に進めます。</p></div>
+        <div class="card"><span class="num">04</span><h3>日程調整・条件交渉もおまかせ</h3><p>面接日程の調整、内定後の年収や入社日の相談など、ご自身では言いにくいことも代わりに行います。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-wrap col">
+    <a class="btn" href="#form" data-cta="mid"><small>転職するか決めていなくてもOK</small>無料でキャリア相談する</a>
+  </div>
+
+  <section class="flow">
+    <div class="col">
+      <h2 class="sec-ttl">ご相談の流れ</h2>
+      <p class="sec-sub">早い方は約1ヶ月で内定まで進みます</p>
+      <ol>
+        <li><h3>フォームからお申込み<span>1分</span></h3><p>下のフォームに入力して送信してください。</p></li>
+        <li><h3>担当者からご連絡<span>原則1営業日以内</span></h3><p>お電話またはメールで、面談の日時を決めます。</p></li>
+        <li><h3>キャリア面談<span>約60分・オンライン可</span></h3><p>今のお仕事やご希望をお聞きし、その場で合いそうな求人もご紹介します。</p></li>
+        <li><h3>応募・面接対策</h3><p>応募書類の添削、面接日程の調整、面接の練習まで一緒に進めます。</p></li>
+        <li><h3>内定・入社準備</h3><p>条件の確認や入社日の調整、退職の進め方までサポートします。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="col">
+      <h2 class="sec-ttl">よくあるご質問</h2>
+      <p class="sec-sub">&nbsp;</p>
+      <details class="qa"><summary>本当に無料ですか？</summary><p>はい、求職者の方のご利用はすべて無料です。費用は、採用が決まった場合に求人企業からいただく仕組みです。</p></details>
+      <details class="qa"><summary>まだ転職するか決めていなくても大丈夫？</summary><p>大丈夫です。「今の職場に残るか迷っている」「情報収集だけしたい」というご相談も歓迎しています。</p></details>
+      <details class="qa"><summary>しつこく応募をすすめられませんか？</summary><p>ご本人の意思なく応募を進めることはありません。合わないと感じたら、遠慮なくお断りください。</p></details>
+      <details class="qa"><summary>働きながらでも相談できますか？</summary><p>はい。面談はオンラインでも可能で、平日夜などのご都合にもできる限り合わせます。</p></details>
+      <details class="qa"><summary>今の会社に知られることはありますか？</summary><p>ご本人の同意なく、現在の勤務先や応募先に情報をお伝えすることはありません。</p></details>
+    </div>
+  </section>
+
+  <section class="form-sec" id="form">
+    <div class="col">
+      <h2 class="sec-ttl">無料キャリア相談のお申込み</h2>
+      <p class="sec-sub">1分で入力完了。原則1営業日以内にご連絡します。</p>
+      <div class="form-card">
+        <form id="leadForm" action="https://formsubmit.co/khinaka@clutch-link.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="【キャリア相談】新規お申込みがありました">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" id="nextUrl" value="">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="流入元" id="src" value="">
+          <input type="hidden" name="キャンペーン" id="cmp" value="">
+          <input type="hidden" name="参照元URL" id="ref" value="">
+          <input type="hidden" name="申込み日時" id="ts" value="">
+
+          <div class="f"><label for="name">お名前<span class="req">必須</span></label><input id="name" name="お名前" type="text" autocomplete="name" placeholder="例）山田 花子" required><p class="err">お名前を入力してください</p></div>
+
+          <div class="f"><label for="age">年齢<span class="req">必須</span></label>
+            <select id="age" name="年齢" required>
+              <option value="">選択してください</option>
+              <option>〜24歳</option><option>25〜29歳</option><option>30〜34歳</option><option>35〜39歳</option><option>40〜44歳</option><option>45歳〜</option>
+            </select><p class="err">年齢を選択してください</p></div>
+
+          <div class="f"><label for="tel">電話番号<span class="req">必須</span></label><input id="tel" name="電話番号" type="tel" autocomplete="tel" inputmode="tel" placeholder="例）090-1234-5678" required><p class="err">電話番号を正しく入力してください</p></div>
+
+          <div class="f"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="例）hanako@example.com" required><p class="err">メールアドレスを正しく入力してください</p></div>
+
+          <div class="f"><label for="job">現在のお仕事<span class="req">必須</span></label>
+            <select id="job" name="現在のお仕事" required>
+              <option value="">選択してください</option>
+              <option>営業</option><option>事務・アシスタント</option><option>販売・接客・サービス</option><option>コールセンター・カスタマーサポート</option><option>IT・エンジニア</option><option>製造・物流・軽作業</option><option>医療・介護・福祉</option><option>その他</option><option>現在は働いていない</option>
+            </select><p class="err">現在のお仕事を選択してください</p></div>
+
+          <div class="f"><span class="lbl">転職を考えている時期<span class="req">必須</span></span>
+            <div class="chips" role="radiogroup">
+              <label><input type="radio" name="転職希望時期" value="すぐにでも" required><span>すぐにでも</span></label>
+              <label><input type="radio" name="転職希望時期" value="3ヶ月以内"><span>3ヶ月以内</span></label>
+              <label><input type="radio" name="転職希望時期" value="半年以内"><span>半年以内</span></label>
+              <label><input type="radio" name="転職希望時期" value="まだ決めていない"><span>まだ決めていない</span></label>
+            </div><p class="err">いずれかを選択してください</p></div>
+
+          <div class="f"><span class="lbl">ご希望の連絡方法<span class="opt">任意</span></span>
+            <div class="chips">
+              <label><input type="radio" name="希望連絡方法" value="電話" checked><span>電話</span></label>
+              <label><input type="radio" name="希望連絡方法" value="メール"><span>メール</span></label>
+              <label><input type="radio" name="希望連絡方法" value="どちらでも"><span>どちらでも</span></label>
+            </div></div>
+
+          <div class="f"><label for="msg">ご相談内容・連絡のつきやすい時間帯<span class="opt">任意</span></label><textarea id="msg" name="ご相談内容" placeholder="例）土日休みの仕事に変わりたい／平日19時以降なら電話OK"></textarea></div>
+
+          <div class="f agree-f"><label class="agree"><input type="checkbox" id="agree" required><span><a href="privacy.html" target="_blank" rel="noopener">個人情報の取り扱い</a>に同意する</span></label><p class="err">同意のチェックをお願いします</p></div>
+
+          <button class="btn" type="submit" id="submitBtn"><small>相談・サポートはすべて無料</small>この内容で申し込む</button>
+          <p class="form-foot">ご入力いただいた情報は、キャリア相談・求人のご紹介とそのご連絡のためにのみ利用します。ご本人の同意なく求人企業へ提供することはありません。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="col">
+    運営：株式会社Clutch<br>
+    大阪府大阪市西区西本町1丁目13-39-606号<br>
+    <a href="privacy.html">個人情報の取り扱い</a><br>
+    © 2026 Clutch Inc.
+  </div>
+</footer>
+
+<div class="float" id="float"><a class="btn" href="#form" data-cta="float"><small>1分で入力完了</small>無料でキャリア相談する</a></div>
+
+<script>
+(function(){
+  // 流入元の記録（UTM・リファラ）。Threads等のリンクに ?utm_source=threads&utm_campaign=manga_01 を付けて計測
+  var q = new URLSearchParams(location.search);
+  var store = {};
+  try { store = JSON.parse(sessionStorage.getItem('lp_src') || '{}'); } catch(e){}
+  if (q.get('utm_source')) { store = { src: q.get('utm_source'), cmp: q.get('utm_campaign') || '', ref: document.referrer || '' }; }
+  else if (!store.src) { store = { src: document.referrer ? new URL(document.referrer).hostname : '直接アクセス', cmp: '', ref: document.referrer || '' }; }
+  try { sessionStorage.setItem('lp_src', JSON.stringify(store)); } catch(e){}
+  document.getElementById('src').value = store.src;
+  document.getElementById('cmp').value = store.cmp;
+  document.getElementById('ref').value = store.ref;
+  document.getElementById('nextUrl').value = new URL('thanks.html', location.href).href;
+
+  // 漫画の続き
+  var more = document.getElementById('readMore');
+  more.addEventListener('click', function(){
+    var sec = document.getElementById('manga');
+    var open = sec.classList.toggle('open');
+    more.setAttribute('aria-expanded', open);
+    more.textContent = open ? '閉じる' : '続きを読む（全5ページ）';
+    if (open) track('manga_read_more');
+  });
+
+  // CTAクリック計測
+  document.querySelectorAll('[data-cta]').forEach(function(a){
+    a.addEventListener('click', function(){ track('cta_click', { position: a.dataset.cta }); });
+  });
+
+  // 追従ボタン：ヒーローを過ぎたら表示、フォームが見えたら隠す
+  var fl = document.getElementById('float'), form = document.getElementById('form');
+  function onScroll(){
+    var r = form.getBoundingClientRect();
+    var show = window.scrollY > 500 && r.top > window.innerHeight;
+    fl.classList.toggle('show', show);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // フォーム検証
+  var f = document.getElementById('leadForm');
+  function check(el){
+    var box = el.closest('.f'); var ok;
+    if (el.type === 'radio') ok = !!f.querySelector('input[name="'+el.name+'"]:checked');
+    else if (el.type === 'checkbox') ok = el.checked;
+    else if (el.type === 'tel') ok = /^[0-9０-９\-－+() ]{10,}$/.test(el.value.trim());
+    else if (el.type === 'email') ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    else ok = el.value.trim() !== '';
+    if (box) box.classList.toggle('bad', !ok);
+    return ok;
+  }
+  f.querySelectorAll('[required]').forEach(function(el){
+    el.addEventListener('change', function(){ check(el); });
+    el.addEventListener('blur', function(){ if (el.value) check(el); });
+  });
+  f.addEventListener('submit', function(e){
+    var first = null, all = true;
+    f.querySelectorAll('[required]').forEach(function(el){ if (!check(el)) { all = false; if (!first) first = el; } });
+    if (!all) { e.preventDefault(); first.focus(); first.closest('.f').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    document.getElementById('ts').value = new Date().toLocaleString('ja-JP');
+    track('generate_lead', { source: store.src, campaign: store.cmp });
+    var b = document.getElementById('submitBtn'); b.disabled = true; b.textContent = '送信中…';
+  });
+})();
+</script>
+</body>
+</html>
